@@ -38,7 +38,7 @@
 
     <form class="form-signin" method="POST" action="autentico.php">
         <img class="mb-4" src="lomalogo.jpeg" alt="" width="92" height="92">
-        <h1 class="h3 mb-3 font-weight-normal">Ingreso al sistema</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Ingreso al software</h1>
         <label  class="sr-only">Usuario</label>
         <input type="text" name="Usuario" class="form-control" placeholder="Usuario" required autofocus>
         <label class="sr-only">Contraseña</label>
