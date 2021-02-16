@@ -36,7 +36,10 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Bloques en bodega</a>
+                    <a class="dropdown-item" href="informe-litro-leche.php">Litros de Leche Diarios</a>
                 </div>
+
+
             </li>
             
 
