@@ -37,6 +37,14 @@ include("funciones.php");
                             </select>
                         </div>
 
+                        <div class="form-group col-md-4">
+                            <label>Tipo de Producto <span style="color:red;">(*)</span></label>
+                            <select name="tipo" class="form-control" required>
+                                <option value="" selected>Escoja una opción...</option>
+                                <?php selectOpciones("tipos_productos", "tip_nombre"); ?>
+                            </select>
+                        </div>
+
                     </div>
 
 

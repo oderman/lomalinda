@@ -11,7 +11,7 @@ include("head.php");
     <div class="container">
 
 
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center mt-4">
             <div class="col col-lg-12">
 
                 <div class="jumbotron">

@@ -32,9 +32,11 @@ include("head.php");
                     <th scope="col">Tina</th>
                     <th scope="col">Litros</th>
                     <th scope="col">Camión</th>
+                    <th scope="col">Tipo de Producto</th>
                     <th scope="col">Fecha</th>
                     <th scope="col">Responsable</th>
                     <th scope="col">Acciones</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +45,7 @@ include("head.php");
                 INNER JOIN tinas ON tin_id=ting_tina
                 INNER JOIN camiones ON cam_id=ting_camion
                 INNER JOIN usuarios ON usr_id=ting_usuario
+                INNER JOIN tipos_productos ON tip_id=ting_tipo
                 ");
                 $i = 1;
                 while ($fila = $consulta->fetch_array()) {
@@ -52,6 +55,7 @@ include("head.php");
                         <td><?= $fila['tin_nombre']; ?></td>
                         <td><?= number_format($fila['ting_litros'],0,".","."); ?></td>
                         <td> <?= $fila['cam_nombre']; ?> </td>
+                        <td> <?= $fila['tip_nombre']; ?> </td>
                         <td><?= $fila['ting_fecha']; ?></td>
                         <td><?= $fila['usr_nombre']; ?></td>
                         <td>
