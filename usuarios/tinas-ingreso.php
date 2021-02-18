@@ -43,18 +43,33 @@ include("head.php");
                 <?php
                 $consulta = $conexion->query("SELECT * FROM tinas_ingreso
                 INNER JOIN tinas ON tin_id=ting_tina
-                INNER JOIN camiones ON cam_id=ting_camion
                 INNER JOIN usuarios ON usr_id=ting_usuario
                 INNER JOIN tipos_productos ON tip_id=ting_tipo
                 ");
                 $i = 1;
                 while ($fila = $consulta->fetch_array()) {
+
+                    $camiones = $conexion->query("SELECT * FROM tinas_ingreso_camion
+                    INNER JOIN camiones ON cam_id=tic_camion
+                    WHERE tic_tinas_ingreso='".$fila['ting_id']."'
+                    ");
                 ?>
                     <tr>
                         <th scope="row"><?= $i; ?></th>
                         <td><?= $fila['tin_nombre']; ?></td>
                         <td><?= number_format($fila['ting_litros'],0,".","."); ?></td>
-                        <td> <?= $fila['cam_nombre']; ?> </td>
+
+                        <td> 
+                        
+                        <?php
+                        while ($cam = $camiones->fetch_array()) {
+                                echo $cam['cam_nombre']."<br>";
+
+                        }
+                        ?> 
+                        
+                        </td>
+
                         <td> <?= $fila['tip_nombre']; ?> </td>
                         <td><?= $fila['ting_fecha']; ?></td>
                         <td><?= $fila['usr_nombre']; ?></td>

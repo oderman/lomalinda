@@ -39,7 +39,7 @@
                     Informes
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Bloques en bodega</a>
+                    <a class="dropdown-item" href="informe-termo.php">Termo</a>
                     <a class="dropdown-item" href="informe-litro-leche.php">Litros de Leche Diarios</a>
                 </div>
 
@@ -52,7 +52,7 @@
                     Mi cuenta
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Mi perfil</a>
+                    <a class="dropdown-item" href="mi-perfil.php">Mi perfil </a>
                     <a class="dropdown-item" href="#">Configuración</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="../salir.php">Cerra sesión</a>

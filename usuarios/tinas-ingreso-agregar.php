@@ -31,7 +31,7 @@ include("funciones.php");
 
                         <div class="form-group col-md-4">
                             <label>Camión <span style="color:red;">(*)</span></label>
-                            <select name="camion" class="form-control" required>
+                            <select name="camion[]" class="form-control" required multiple>
                                 <option value="" selected>Escoja una opción...</option>
                                 <?php selectOpciones("camiones", "cam_nombre"); ?>
                             </select>

@@ -15,6 +15,7 @@ if($num>0)
 	$_SESSION["id"] = $fila[0];
 	//$_SESSION["idUsuario"] = $fila[0];
 	if(!isset($_POST["idseg"]) or !is_numeric($_POST["idseg"])){$url = 'usuarios/';}
+	
 	else{$url = 'usuarios/clientes-seguimiento-editar.php?id='.$_POST["idseg"];}
 	
 	$conexion->query("UPDATE usuarios SET usr_sesion=1, usr_ultimo_ingreso=now() WHERE usr_id='".$fila[0]."'");
